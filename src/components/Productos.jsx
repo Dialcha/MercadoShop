@@ -1,13 +1,22 @@
 import React from "react";
 import Producto from "./Producto";
 import Grid from "@material-ui/core/Grid";
-import dataTest from '../assets/datatest';
+import dataTest from "../assets/datatest";
 
 function Productos() {
   return (
-    <Grid container spacing={3}>
+    <Grid container spacing={1}>
       {dataTest.map((producto) => {
-        return <Producto imagen={producto.image} titulo={producto.title} vendedor={producto.reseller} precio={producto.price}/>;
+        return (
+          <Grid item xs={12}>
+            <Producto
+              imagen={producto.image}
+              titulo={producto.title}
+              vendedor={producto.reseller}
+              precio={producto.price}
+            />
+          </Grid>
+        );
       })}
     </Grid>
   );

@@ -26,12 +26,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Product({ imagen, titulo, vendedor, precio }) {
+function Producto({ imagen, titulo, vendedor, precio }) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Grid container xs={12}>
+      <Grid item xs={12}>
       <Paper className={classes.paper}>
         <Grid container xs={12}>
           <Grid item>
@@ -74,4 +74,4 @@ function Product({ imagen, titulo, vendedor, precio }) {
   );
 }
 
-export default Product;
+export default Producto;
