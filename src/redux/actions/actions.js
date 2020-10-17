@@ -11,7 +11,7 @@ export function receiveProducts(keyword, json) {
     return {
         type: RECEIVE_PRODUCTS,
         keyword,
-        productos: json.map((child) => child),
+        productos: json,
         receivedAt: Date.now(),
     };
 }

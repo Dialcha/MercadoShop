@@ -8,7 +8,7 @@ function Productos() {
     <Grid container spacing={1}>
       {dataTest.map((producto) => {
         return (
-          <Grid item xs={12}>
+          <Grid item xs={12} key={producto.id}>
             <Producto
               imagen={producto.image}
               titulo={producto.title}

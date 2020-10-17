@@ -28,7 +28,7 @@ class ProductosContainer extends Component {
 const mapDispatchToProps = (dispatch) => {
     return {
       onCategoryClick: (keyword) =>
-        dispatch(fetchProductos(keyword)),
+        dispatch(fetchProducts('iphone')),
     };
   };
   

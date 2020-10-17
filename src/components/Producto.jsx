@@ -53,7 +53,7 @@ function Producto({ imagen, titulo, vendedor, precio }) {
                 <Typography variant="body2" color="textSecondary">
                   Vendido por: {vendedor}
                 </Typography>
-                <Typography variant="body" component="h1">
+                <Typography variant="body1" component="h1">
                   {precio}
                 </Typography>
               </Grid>
