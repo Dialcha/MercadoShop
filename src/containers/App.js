@@ -18,7 +18,7 @@ function App() {
       <Switch>
         <Route path="/search/:keyword" component={ProductosFetch}></Route>
         <Route path="/detalle" component={ProductoContainer}></Route>
-        <Route exact path="/" component={Productos}></Route>
+        <Route exact path="/" component={ProductoContainer}></Route>
         <Route>
           <NotFound></NotFound>
         </Route>

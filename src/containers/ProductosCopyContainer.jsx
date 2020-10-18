@@ -4,12 +4,18 @@ import Productos from "../components/ProductosCopy";
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    onRouteChange: (keyword) => {
-      dispatch(fetchProducts(keyword));
+    onRouteChange: async (keyword) => {
+      await dispatch(fetchProducts(keyword));
     },
   };
 };
 
-const ProductosFetch = connect(null, mapDispatchToProps)(Productos);
+const mapStateToProps = (state) => {
+  return {
+    items: state.fetchProductos.productos.items
+  }
+};
+
+const ProductosFetch = connect(mapStateToProps, mapDispatchToProps)(Productos);
 
 export default ProductosFetch;
