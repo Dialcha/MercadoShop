@@ -33,8 +33,8 @@ function Producto({ imagen, titulo, vendedor, precio }) {
     <div className={classes.root}>
       <Grid item xs={12}>
       <Paper className={classes.paper}>
-        <Grid container xs={12}>
-          <Grid item>
+        <Grid container>
+          <Grid item={true}>
             <ButtonBase className={classes.image}>
               <img className={classes.img} alt="complex" src={imagen} />
             </ButtonBase>
@@ -43,7 +43,6 @@ function Producto({ imagen, titulo, vendedor, precio }) {
             <Grid item xs container direction="column" spacing={2}>
               <Grid item xs>
                 <Typography
-                  gutterBottom
                   gutterBottom
                   variant="h5"
                   component="h2"

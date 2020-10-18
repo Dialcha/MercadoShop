@@ -1,11 +1,8 @@
-import React, { useEffect } from "react";
-import Productos from "../components/Productos";
+import React from "react";
 import NotFound from "../components/NotFound";
 import HeaderContainer from "./HeaderContainer.jsx";
 import ProductoContainer from "./ProductoContainer";
-import ProductosContainer from "./ProductosContainer";
-import ProductosFetch from "./ProductosCopyContainer";
-import HeaderSearch from "./HeaderSearch";
+import ProductosFetch from "./ProductosContainer";
 
 import { Switch, Route, withRouter } from "react-router-dom";
 

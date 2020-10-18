@@ -64,12 +64,6 @@ const useStyles = makeStyles((theme) => ({
 function Header({ handleSubmit }) {
   const classes = useStyles();
 
-  function keyPress(e) {
-    if (e.keyCode == 13) {
-      handleSubmit();
-    }
-  }
-
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -84,7 +78,6 @@ function Header({ handleSubmit }) {
             <InputBase
               required
               id="searchInput"
-              onKeyPress={keyPress}
               placeholder="Buscar productos..."
               onKeyPress={data => {
                 if (data.charCode === 13) {

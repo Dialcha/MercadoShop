@@ -1,19 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import Producto from "./Producto";
 import Grid from "@material-ui/core/Grid";
-import dataTest from "../assets/datatest";
 
-function Productos() {
+function Productos({ onRouteChange, items }) {
+  let { keyword } = useParams();
+
+  useEffect(() => {
+    onRouteChange(keyword);
+    console.log(items);
+  }, [window.location.pathname]);
+
   return (
     <Grid container spacing={1}>
-      {dataTest.map((producto) => {
+      {items.map((item) => {
         return (
-          <Grid item xs={12} key={producto.id}>
+          <Grid item xs={12} key={item.id}>
             <Producto
-              imagen={producto.image}
-              titulo={producto.title}
-              vendedor={producto.reseller}
-              precio={producto.price}
+              imagen={item.thumbnail}
+              titulo={item.title}
+              vendedor={item.seller}
+              precio={item.price}
             />
           </Grid>
         );

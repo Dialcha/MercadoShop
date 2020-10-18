@@ -6,8 +6,7 @@ function NotFound() {
     <div>
       <h1>Page not found</h1>
       <p>
-        Anímate e ingresa a <Link to="/">Principales</Link> e infórmate con las
-        últimas noticias
+        Anímate e ingresa a <Link to="/">Principales</Link> y encuentra los mejores productos
       </p>
     </div>
   );
