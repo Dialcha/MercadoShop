@@ -23,7 +23,7 @@ function productos(
     case RECEIVE_PRODUCTS:
       return Object.assign({}, state, {
         isFetching: false,
-        items: action.products,
+        items: action.productos,
       });
     default:
       return state;
